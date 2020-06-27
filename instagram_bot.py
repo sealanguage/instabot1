@@ -34,10 +34,19 @@ class InstaBot :
         sleep(2)
 
         self.driver.find_element_by_xpath("/html/body/div[1]/section/main/section/div[3]/div[1]/div/div[2]/div[1]/a").click()
-        sleep(10)
+        sleep(4)
 
 
-InstaBot('laneiodev', pw)
+# change password
+    def change_pw(self):
+        # self.driver.find_element_by_xpath("/html/body/div[1]/section/main/section/div[3]/div[1]/div/div[2]/div[1]/a").click()
+        # sleep(2)
+
+        self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/header/section/div[1]/div/button").click()
+        sleep(2)
+
+mybot = InstaBot('laneiodev', pw)
+mybot.change_pw()
 
 # if __name__ == "__main__" :
 #     ig_bot = instagramBot("temp_username", "temp_password")
