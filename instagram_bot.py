@@ -1,6 +1,8 @@
 from selenium import webdriver
 from time import sleep
 from pw import pw
+import smtplib
+
 
 import os
 
@@ -73,6 +75,14 @@ class InstaBot :
         # click change password button
         self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/form/div[4]/div/div/button").click()
         sleep(2)
+
+# send email to user function
+#     def send_mail(self):
+#         server = smtplib.SMTP('smtp.gmail.com', )
+#         server.ehlo()
+#         server.starttls()
+#
+
 
 
 if(new_pw == confirm_pw) :
