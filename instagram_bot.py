@@ -76,6 +76,10 @@ class InstaBot :
         self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/form/div[4]/div/div/button").click()
         sleep(4)
 
+#   driver management code from Joe
+#   driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1);
+
+
 # send email to user function
     def send_mail(self):
         server = smtplib.SMTP('smtp.gmail.com', 587)    #  587
