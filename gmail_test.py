@@ -1,20 +1,31 @@
 from selenium import webdriver
 from time import sleep
 from pw import pw
+# import os
 import smtplib
 
-smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
-smtpObj.ehlo()
-smtpObj.starttls()      #  this will encrypt the connection
-smtpObj.ehlo()
+# EMAIL_ADDRESS = os.environ.get('EMAIL_USER')
+# EMAIL_PASSWORD = os.environ.get('EMAIL_PASS')
+
+
+
+# smtpObj = smtplib.SMTP('smtp.gmail.com', 587)
+# smtpObj.ehlo()
+# smtpObj.starttls()      #  this will encrypt the connection
+# smtpObj.ehlo()
 
 #  login to server. email, generated
+# smtpObj.login('laneiodev@gmail.com', 'dfiqxsvqmichnkft')
+
+
+smtpObj = smtplib.SMTP_SSL('smtp.gmail.com', 465)
 smtpObj.login('laneiodev@gmail.com', 'dfiqxsvqmichnkft')
 
+
 # create an email to be sent automatically
-subject = "This is email sent from instabot"
-body = "Your color site data has been changed. Your new data is here"
-msg = "Subject: {subject}\n\n\n {body}"
+subject = 'This is email sent from laneiodev'
+body = 'Your color site data has been changed. Your new data is here.'
+msg = f"Subject: {subject}\n\n\n {body}"
 
 #  email to send
 smtpObj.sendmail(
