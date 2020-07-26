@@ -54,23 +54,23 @@ class InstaBot :
 
         # select the settings button
         self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/header/section/div[1]/div/button").click()
-        sleep(2)
+        sleep(4)
 
         # select change password button
         self.driver.find_element_by_xpath("/html/body/div[4]/div/div/div/div/button[1]").click()
-        sleep(2)
+        sleep(4)
 
         # auto fill pw into pw input
         self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/form/div[1]/div/input").send_keys(pw)
-        sleep(2)
+        sleep(4)
 
         # ask user for new pw
         self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/form/div[2]/div/input").send_keys(new_pw)
-        sleep(2)
+        sleep(4)
 
         # ask user to confirm new pw
         self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/form/div[3]/div/input").send_keys(confirm_pw)
-        sleep(2)
+        sleep(4)
 
         # click change password button
         self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/form/div[4]/div/div/button").click()
