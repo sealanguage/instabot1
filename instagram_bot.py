@@ -6,7 +6,7 @@ import smtplib
 
 # import os
 
-# ask new password from the user
+# ask new instagram password from the user
 new_pw = input("Enter new password : ")
 confirm_pw = input("Enter same password to confirm : ")
 
@@ -26,7 +26,7 @@ class InstaBot :
         """
         self.driver = webdriver.Chrome('./chromedriver')
         self.driver.get('https://www.instagram.com/')
-        sleep(1)
+        sleep(2)
 
         # load un pw and submit login button
         self.driver.find_element_by_name('username').send_keys(username)
@@ -81,10 +81,12 @@ class InstaBot :
 
 
 # send email to user function
+    print("Starting to send email")
     def send_mail(self):
         server = smtplib.SMTP('smtp.gmail.com', 587)    #  587
         server.ehlo()
         server.starttls()
+        server.ehlo()
 
         # login to email account and use app password for authentication
         server.login("laneiodev@gmail.com", "dfiqxsvqmichnkft")

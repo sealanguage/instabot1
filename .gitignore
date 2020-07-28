@@ -3,5 +3,12 @@
 
 
 #  log into instagram laneiodev using elaine.froehlich@gmail.com
-#  send email from
+#  send email from laneiodev gmail
+
+
+#  igpassword
+pw = "test4567"
+
+# Ignore all text files
+*.txt
 
