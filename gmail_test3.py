@@ -7,20 +7,21 @@ def read_creds():
         file = f.readlines()
         # print(file)    #  this did print the text file successfully
         user = file[0].strip()
+        print(user)
         passw = file[1].strip()
+        print(passw)
         return user, passw
 
 
 user: str
 user, passw = read_creds()
-reciever = "efroehlilch@cox.net"
-port = 456
+
+reciever = "efroehlich@cox.net"
+port = 465
 
 
-print(user, passw)        #  successfully gets user and password from text file
+# print(user, passw)        #  successfully gets user and password from text file
 
-# sender = "laneiodev@gmail.com"
-# passw = "dfiqxsvqmichnkft"
 
 
 msg = """\

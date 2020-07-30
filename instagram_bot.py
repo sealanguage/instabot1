@@ -73,11 +73,14 @@ class InstaBot :
         sleep(4)
 
         # click change password button
+        #   driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1); replace with py code
         self.driver.find_element_by_xpath("/html/body/div[1]/section/main/div/article/form/div[4]/div/div/button").click()
         sleep(4)
 
 #   driver management code from Joe
 #   driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1);
+    #  try to use wait until you find this element and then continue on with the script
+    #  specific wait   driver time span    wait until expected conditions    element by
 
 
 # send email to user function
@@ -119,3 +122,8 @@ else:
 
 
 
+
+# ChromeOptions options = new ChromeOptions();
+#             options.AddArgument("--headless");
+#             //options.AddArgument("--remote-debugging-port=9222");
+#             IWebDriver driver = new ChromeDriver(options); 
